@@ -1,0 +1,35 @@
+Al momento de querer crear un entorno virtual en alguna carpeta, primero inicias la carpeta aqui en visual studio
+depsués, en la terminal introduces el comando: python -m venv 'Nombre de entorno', esto es para crear el entorno 
+dentro de la carpeta.
+
+Para activar el entorno en el que vamos a trabajar, se inserta en la terminal:source 'nombre carpeta de entorno'/bin/activate
+Esto sirve para activar nuestro entorno y empezar a trabajar.
+
+Cuando queremos crear el archivo de un project, siempre se hace en la ruta que queremos.
+Problema de no poder acceder a carpeta: SE USA CD al inicio de la ruta en la que queremos ingresar, o sea carpeta
+y cundo estemos en la carpeta, el comando para crear el proyecto en el entorno es: django-admin startproject NameEntorn
+
+Para poder inicializar el servidor, primeramente debemos esta en la carpeta del proyect e iniciar el manage.py
+ya que es el que nos va a ejecutar los codigos, este codigo se ejecuta dentro de la carpeta en la terminal
+se inicia asi: python manage.py runserver 
+
+Cuando el server empieza a cargar nos devuelve un link para visualizar la pagina corriendo.
+
+
+--------------> PARA CREAR ENTORNO, ACTIVACION, INSTALACION PAQUETE, INICIO PROYECTO
+
+1 - python -m venv En2
+2 - source En2/bin/activate (Se activa el coding de la carpeta bin)
+3 - pip install django
+4 - django-admin startproject nombreproyecto
+5 - Se inicia en visual studio para cargar el manage.py
+6 - python manage.py runserver (correr el proyecto o sea el server)
+
+- APARTIR DE ESTE PUNTO SE HACEN ALGUNAS COSAS:
+El proyecto se divide en miniproyectos y ese miniprpoyectos son mejor conocidas como apps y se crea las necesarias para el proyecto final
+
+7 - django-admin startapp Departamento (para crear aplicaciones en una carpeta a la altura de manage.py)
+
+Cuando se crea la aplicación es necesario indicarle a la computadora que tome este como una app pero dentro del entorno que usaremos, se agrego la app a Base (entorno local), después dentro de las mismas carpetas de las apps, en el archivo "apps" se agrega al principio el nombre de la carpeta, es decir de la carpeta en donde están, ejemplo: carpeta original "applications" y carpeta en donde se ubica la app "Departamento", entonces en el archivo de apps dentro de departamento, modificamos con "applications.Departamento".
+
+Esto nos permite poder cargar estas apps creadas en el entorno que deseamos pero claro como son apps se crea su propia carpeta para un mejor control
